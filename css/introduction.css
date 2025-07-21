@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+.title {
+  height: 310px;
+  background-image: url(../images/introduction/bg-title.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.title p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.nagoya-introduction-content {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 75px;
+}
+
+.nagoya-introduction-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nagoya-introduction-element.reverse {
+  flex-direction: row-reverse;
+}
+
+.nagoya-introduction-element img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.nagoya-introduction-text {
+  max-width: 500px;
+  margin-right: 40px;
+}
+
+.nagoya-introduction-element.reverse .nagoya-introduction-text {
+  margin-left: 40px;
+  margin-right: 0;
+}
+
+.nagoya-introduction-text h2 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.nagoya-introduction-text h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 20px;
+}
+
+.nagoya-introduction-text p {
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 25px;
+}
+
+.page-link-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.page-link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.page-link-button:hover {
+  background-color: #333333;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+  .title {
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  .main {
+    color: #000000;
+  }
+
+  .nagoya-introduction-content {
+    width: 100%;
+    max-width: 90%;
+    margin-top: 45px;
+    gap: 45px;
+  }
+
+  .nagoya-introduction-element {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .nagoya-introduction-element.reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .nagoya-introduction-text {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: none;
+    color: #000000;
+  }
+
+  .nagoya-introduction-element.reverse .nagoya-introduction-text {
+    margin-left: 0;
+    margin-right: 0;
+    color: #000000;
+  }
+
+  .nagoya-introduction-element img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .nagoya-introduction-text h2 {
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .nagoya-introduction-text p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  .page-link-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+
+  .page-link-button {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .page-link-button:hover {
+    background-color: #333333;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+}
