@@ -18,147 +18,237 @@ a {
 }
 
 body {
-  font-family: sans-serif;
-  font-size: 16px;
-  color: #000000;
-  line-height: 1;
-  background-color: #ffffff;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1;
+    background-color: #ffffff;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
+    color: #000000;
+    height: 110px;
 }
 
 .header-inner {
-  max-width: 1200px;
-  height: 110px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    max-width: 1200px;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.toggle-menu-button{
-  display: none;
+.header-logo {
+    width: 100px;
+    display: block;
 }
 
-.header-logo{
-  display: block;
-  width: 100px;
+.site-menu ul {
+    display: flex;
 }
 
-.site-menu ul{
-  display: flex;
-}
-
-.site-menu ul li{
-  margin-left: 20px;
-  margin-right: 20px;
+.site-menu ul li {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .site-menu ul li a {
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: bold;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
 }
 
-.footer{
-  color: #ffffff;
-  background-color: #24211b;
-  padding-top: 30px;
-  padding-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-logo{
-  display: block;
-  width: 235px;
-  margin-top: 45px;
-}
-
-.copyright{
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 25px;
-}
-
-@media (max-width: 800px){
-  .site-menu ul {
-    display: block;
-    text-align: center;
-  }
-
-  .site-menu li {
-    margin-top: 20px;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    height: 50px;
-    z-index: 10;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .header-inner {
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100%;
-    position: relative;
-  }
-
-  .header-logo {
-    width: 40px;
-  }
-
-  .header-site-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    color:  #ffffff;
-    background-color: #736e62;
-    padding-top: 30px;
-    padding-bottom: 50px;
+.toggle-menu-button {
     display: none;
-  }
+}
 
-  .header-site-menu.is-show{
+.header-site-menu {
     display: block;
-  }
+}
 
-  .toggle-menu-button {
-    display: block;
-    width: 44px;
-    height: 34px;
-    background-image: url(../images/common/icon-menu.png);
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    outline: none;
-  }
+.header-site-menu ul {
+    padding: 0;
+}
 
-  .main {
-    padding-top: 50px;
-  }
+.footer {
+    color: #ffffff;
+    background-color: #24211b;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-  .footer-logo {
-    margin-top: 30px;
-  }
+.footer-logo {
+    width: 240px;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
 
-  .copyright {
-    margin-top: 25px;
-  }
+.copyright {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        height: 50px;
+        z-index: 10;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        position: relative;
+    }
+
+    .header-logo {
+        width: 42px;
+        margin-top: 5px;
+    }
+
+    .header-site-menu {
+        display: none;
+        background-color: #736e62;
+        color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .header-site-menu.is-show {
+        display: block;
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .header-site-menu.is-show ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-site-menu.is-show .site-menu li {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .site-menu ul {
+        text-align: center;
+        padding: 2.5px 0;
+    }
+
+    .site-menu li {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-15px);
+        transition: all 0.4s ease-out;
+    }
+
+    .toggle-menu-button {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-image: url(../images/common/icon-hamburger-menu.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        outline: none;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .toggle-menu-button.is-active {
+        transform: rotate(90deg);
+        width : 30px;
+        height: 30px;
+        background-image: url(../images/common/hamburger-menu-cross.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: transparent;
+    }
+
+    .main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer {
+        color: #ffffff;
+        background-color: #24211b;
+        padding-top: 30px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-site-menu {
+        width: 240px;
+        margin-top: 40px;
+    }
+
+    .footer .site-menu ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer .site-menu ul li {
+        margin: 0;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .footer-logo {
+        width: 240px;
+        margin-top: 40px;
+        margin-bottom: auto;
+    }
+
+    .copyright {
+        margin-top: 20px;
+    }
 }
