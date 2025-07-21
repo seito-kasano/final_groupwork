@@ -95,7 +95,12 @@ img {
   }
 
   .site-menu li {
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: all 0.4s ease-out;
   }
 
   .header {
@@ -118,47 +123,81 @@ img {
 
   .header-logo {
     width: 40px;
+    margin-top: 5px;
   }
 
   .header-site-menu {
+    display: none;
+    background-color: #736e62;
+    color: #ffffff;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    color:  #ffffff;
-    background-color: #736e62;
-    padding-top: 30px;
-    padding-bottom: 50px;
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
   }
 
-  .header-site-menu.is-show{
-    display: block;
+  .header-site-menu.is-show {
+      display: block;
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
   }
+
+  .header-site-menu.is-show ul {
+      display: block;
+      padding: 0;
+      margin: 0;
+  }
+
+    .header-site-menu.is-show .site-menu li {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
 
   .toggle-menu-button {
     display: block;
-    width: 44px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     background-image: url(../images/common/icon-menu.png);
-    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     background-color: transparent;
     border: none;
     border-radius: 0;
     outline: none;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .toggle-menu-button.is-active {
+      transform: rotate(90deg);
+      width : 24px;
+      height: 24px;
+      background-image: url(../images/common/icon-menu-cross.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: transparent;
   }
 
   .main {
-    padding-top: 50px;
+      padding-top: 50px;
   }
 
   .footer-logo {
-    margin-top: 30px;
+      margin-top: 30px;
   }
 
   .copyright {
-    margin-top: 25px;
+      margin-top: 25px;
   }
 }
