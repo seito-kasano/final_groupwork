@@ -196,7 +196,7 @@ img {
   .footer {
     color: #ffffff;
     background-color: #24211b;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -204,30 +204,30 @@ img {
   }
 
   .footer-site-menu {
-      width: 240px;
-      margin-top: 40px;
+    width: 240px;
+    margin-top: 40px;
   }
 
   .footer .site-menu ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 40px;
-      text-align: center;
-      margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 40px;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   .footer .site-menu ul li {
-      margin: 0;
-      opacity: 1;
-      transform: none;
-      pointer-events: auto;
-      transition: none;
+    margin: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    transition: none;
   }
 
   .footer-logo {
-      width: 240px;
-      margin-top: 10px;
-      margin-bottom: auto;
+    width: 240px;
+    margin-top: 10px;
+    margin-bottom: auto;
   }
 
   .copyright {
